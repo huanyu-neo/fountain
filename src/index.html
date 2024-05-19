@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Fountain · 甘泉</title>
-    <base href="/">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/core.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css">
+    <link rel="stylesheet" href="ionic/css/core.css">
+    <link rel="stylesheet" href="ionic/css/ionic.css">
 </head>
 <body>
 <ion-app>
@@ -15,8 +14,8 @@
         <ion-toolbar color="primary">
             <ion-title>Fountain</ion-title>
             <ion-buttons slot="end">
-                <ion-button [hidden]="lang === 'en'" (click)="setLanguage('en')">English</ion-button>
-                <ion-button [hidden]="lang === 'zh'" (click)="setLanguage('zh')">简体中文</ion-button>
+                <ion-button onclick="setLanguage('en')">English</ion-button>
+                <ion-button onclick="setLanguage('zh')">简体中文</ion-button>
             </ion-buttons>
         </ion-toolbar>
     </ion-header>
@@ -28,14 +27,14 @@
             </ion-card-header>
             <ion-card-content>
                 <p>在这里，您可以和世界各地的玩家一起畅玩网络游戏。请点击下面的按钮进入游戏。</p>
-                <ion-button expand="block" (click)="enterGame()">进入游戏</ion-button>
+                <ion-button onclick="enterGame()">进入游戏</ion-button>
             </ion-card-content>
         </ion-card>
     </ion-content>
 </ion-app>
 
 <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script src=""></script>
 <script>
     const app = document.querySelector('ion-app');
     const langButtons = document.querySelectorAll('ion-button');

@@ -25,5 +25,5 @@ function setLanguage(newLang) {
 }
 
 function enterGame() {
-    
+    window.location.href = window.location.origin + "/play.html"
 }
